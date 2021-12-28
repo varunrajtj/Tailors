@@ -1,0 +1,22 @@
+<!--<a [routerLink]="'/home'"> Home </a>
+<a [routerLink]="'/about'"> About </a>
+<a [routerLink]="'/contact'"> Contact </a>
+<a [routerLink]="'/gallery'"> Gallery </a>
+<div>
+    <router-outlet></router-outlet>
+</div>
+-->
+
+<mat-toolbar color="primary">
+    <span>Paula's Place Tailor Shop Ltd</span>
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+</mat-toolbar>
+
+<nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        {{link.label}}
+    </a>
+</nav>
+<router-outlet></router-outlet>
