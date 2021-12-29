@@ -12,7 +12,7 @@
 @import "./assets/font-awesome/scss/fontawesome.scss";
 @import "./assets/font-awesome/scss/solid.scss";
 @import "./assets/font-awesome/scss/brands.scss";
-
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 .user {
   @extend %fa-icon;
   @extend .fas;
