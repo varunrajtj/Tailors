@@ -13,7 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule, HammerModule } from '@angular/platform-browser';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from "./app.component";
@@ -24,7 +24,7 @@ import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
-  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, AppRoutingModule, FormsModule, NgxGalleryModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, MatTabsModule, MatCardModule, MatFormFieldModule, MatInputModule, HammerModule],
+  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, AppRoutingModule, FormsModule, NgxGalleryModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, MatTabsModule, MatCardModule, MatFormFieldModule, MatInputModule, HammerModule, FlexLayoutModule],
   declarations: [AppComponent, GalleryComponent, HomeComponent, ContactComponent, AboutComponent],
   providers: [],
   bootstrap: [AppComponent]
