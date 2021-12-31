@@ -43,6 +43,11 @@ export class GalleryComponent implements OnInit {
 
     this.galleryImages = [
       {
+        small: 'https://lh3.googleusercontent.com/FUcdfc6yRd4sWxtzzuFLclxV2HmSqQIw3kH0ftoWqXfaibQMiqeQHqMzFjJrmtZbfXDs2BUDG9iNWYIX0mAyZD9E0L6xqFFBri34LvOwFaqrl8kdpvgdC-4vjU0gSaIiLhw8qlcGjg=w2400',
+        medium: 'https://lh3.googleusercontent.com/FUcdfc6yRd4sWxtzzuFLclxV2HmSqQIw3kH0ftoWqXfaibQMiqeQHqMzFjJrmtZbfXDs2BUDG9iNWYIX0mAyZD9E0L6xqFFBri34LvOwFaqrl8kdpvgdC-4vjU0gSaIiLhw8qlcGjg=w2400',
+        big: 'https://lh3.googleusercontent.com/FUcdfc6yRd4sWxtzzuFLclxV2HmSqQIw3kH0ftoWqXfaibQMiqeQHqMzFjJrmtZbfXDs2BUDG9iNWYIX0mAyZD9E0L6xqFFBri34LvOwFaqrl8kdpvgdC-4vjU0gSaIiLhw8qlcGjg=w2400'
+      },
+      {
         small: 'https://preview.ibb.co/jrsA6R/img12.jpg',
         medium: 'https://preview.ibb.co/jrsA6R/img12.jpg',
         big: 'https://preview.ibb.co/jrsA6R/img12.jpg'
