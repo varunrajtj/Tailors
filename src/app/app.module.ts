@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,7 +25,7 @@ import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
-  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, AppRoutingModule, FormsModule, NgxGalleryModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, MatTabsModule, MatCardModule, MatFormFieldModule, MatInputModule, HammerModule, FlexLayoutModule],
+  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, AppRoutingModule, FormsModule, NgxGalleryModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, MatTabsModule, MatCardModule, MatFormFieldModule, MatInputModule, HammerModule, FlexLayoutModule, ReactiveFormsModule],
   declarations: [AppComponent, GalleryComponent, HomeComponent, ContactComponent, AboutComponent],
   providers: [],
   bootstrap: [AppComponent]

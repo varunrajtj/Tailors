@@ -1,66 +1,36 @@
-@import "../../assets/font-awesome/scss/fontawesome.scss";
-@import "../../assets/font-awesome/scss/brands.scss";
-.openinghours {
-	font-family: Lucida Console;
-	border-radius: 4px;
-	margin: 10px;
-	box-shadow: 0 0 10px black;
-	padding: 0 10px 0 10px;
-	overflow: hidden;
-	display: inline-block;
+.hidden {
+	display: none
 }
-.openinghourscontent {
-	float: left;
-	h2 {
-		display: block;
-		text-align: center;
-		margin-top: .33em;
-	}
-	button {
-		color: white;
-		font-family: Courier New;
-		font-size: large;
-		font-weight: bolder;
-		background-color: #4679BD;
-		border-radius: 4px;
-		width: 100%;
-		margin-bottom: 10px;
-	}
+.visible {
+	display: block
 }
-.today {
-	color: #8AC007;
+.center-text {
+	text-align: center
 }
-.opening-hours-table {
-	tr {
-		td {
-			&:first-child {
-				font-weight: bold;
-			}
-			padding: 5px;
-		}
-	}
+form.contact {
+	display: flex;
+	flex-direction: column;
+	max-width: 200px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
 }
-#open-status {
-	display: block;
-	margin-top: -1em;
-	text-align: center;
-	border: dotted lightgrey 3px;
+input,
+button {
+	margin-bottom: 10px;
 }
-.openorclosed {
-	&:after {
-		content: " open during these hours:";
-	}
+button {
+	margin-top: 10px;
+	background-color: transparent;
+	color: black;
+	border: 1px solid black;
+	padding: 4px 16px;
+	transition: 0.4s;
+	width: 100%;
+	margin-top: 10px;
 }
-.open {
-	color: green;
-	&:after {
-		content: " Open";
-		color: #6C0;
-	}
-}
-.closed {
-	&:after {
-		content: " Closed";
-		color: red;
-	}
+button:hover:enabled{
+	color: white;
+	background-color: black;
 }
