@@ -1,33 +1,51 @@
-import { NgModule } from "@angular/core";
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NgxGalleryModule } from '@kolkov/ngx-gallery';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http' ;
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { AppRoutingModule } from './app-routing.module';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
-import { AppComponent } from "./app.component";
-import { GalleryComponent } from './gallery/gallery.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+import { ServiceMailService } from './services/service-mail.service';
+
+import { MyStartComponent } from './templates/my-start/my-start.component';
+import { MyContactComponent } from './templates/my-contact/my-contact.component';
+import { MyServiceComponent } from './templates/my-service/my-service.component';
+import { MyGalleryComponent } from './templates/my-gallery/my-gallery.component';
+
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+
+
+import { MyHeaderComponent } from './allways/my-header/my-header.component';
+import { MyFooterComponent } from './allways/my-footer/my-footer.component';
+import { MarkAsteriskDirective } from './directives/directives/mark-asterisk.directive';
 
 
 @NgModule({
-  imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule, AppRoutingModule, FormsModule, NgxGalleryModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, MatTabsModule, MatCardModule, MatFormFieldModule, MatInputModule, HammerModule, FlexLayoutModule, ReactiveFormsModule],
-  declarations: [AppComponent, GalleryComponent, HomeComponent, ContactComponent, AboutComponent],
-  providers: [],
+  declarations: [
+    AppComponent,
+    MyStartComponent,
+    MyContactComponent,
+    MyHeaderComponent,
+    MyFooterComponent,
+    MyServiceComponent,
+    MyGalleryComponent,
+    MarkAsteriskDirective
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule ,
+    BrowserModule,
+    BrowserAnimationsModule,
+    NgxGalleryModule,
+    ModalModule.forRoot(),
+    PopoverModule.forRoot() 
+  ],
+  providers: [ServiceMailService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

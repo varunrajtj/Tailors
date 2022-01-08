@@ -1,0 +1,19 @@
+<section style="margin-top: 1em; margin-bottom: 1em;">
+    <div class="container">
+        <div class="d-flex flex-row">
+            <div class="d-flex flex-column">
+                <h1 class="mx-2">
+                    <span *ngIf="changeLanguage" @fadeIn>GALLERY.</span>
+                    <span *ngIf="!changeLanguage" @fadeIn>GALARIE.</span>
+                </h1>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div class="d-flex flex-column">
+                <div class="gallery-wrapper">
+                    <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

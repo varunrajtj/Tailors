@@ -1,0 +1,43 @@
+.cards {
+  width: 90vw;
+  height: 20vw;
+  background-color: brown;
+  margin: 2rem;
+}
+.card1 {
+  background-color: rgb(42, 165, 58);
+}
+.pic-start {
+  margin: 5vh;
+  opacity: 0.75;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -moz-box-shadow: inset 10px 0 30px #333;
+  -webkit-box-shadow: inset 10px 0 30px #333;
+  box-shadow: inset 10px 0 30px #333;
+}
+.shadow {
+  height: auto;
+  width: 100%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

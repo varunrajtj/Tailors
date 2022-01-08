@@ -1,0 +1,81 @@
+<section style="margin-top: 1em; margin-bottom: 1em;">
+    <h1 class="mx-2">
+        <span *ngIf="changeLanguage" @fadeIn>PROJECTS.</span>
+        <span *ngIf="!changeLanguage" @fadeIn>PROJEKTE.</span>
+    </h1>
+    <h1 class="text-right mr-2 ml-0">
+        <span *ngIf="changeLanguage" @fadeIn>ALSO TEAM</span>
+        <span *ngIf="!changeLanguage" @fadeIn>AUCH IM TEAM</span>
+    </h1>
+
+    <div class="row px-4 my-5 mr-0">
+
+        <div class="col-md-3 mb-3">
+            <div class="card" tabindex="0" [popover]="deutscheBiografie" popoverTitle="Frontend Development"
+                placement="right" [outsideClick]="true">
+                <ng-template #deutscheBiografie>
+                    <div [innerHtml]="htmlOne"></div>
+                </ng-template>
+                <h5 class="card-header"><span @fadeIn *ngIf="changeLanguage">Content Website</span>
+                    <span @fadeIn *ngIf="!changeLanguage">Content Website</span>
+                </h5>
+                <div class="card-body">
+                    <img class="img-fluid" src="../../../assets/pics/Alteraction.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card" tabindex="0" [popover]="onePager" popoverTitle="Frontend Development" placement="right"
+                [outsideClick]="true">
+                <ng-template #onePager>
+                    <div [innerHtml]="htmlTwo"></div>
+                </ng-template>
+
+                <h5 class="card-header"><span @fadeIn *ngIf="changeLanguage">Corporate Onepager</span>
+                    <span @fadeIn *ngIf="!changeLanguage">Corporate Onepager</span>
+                </h5>
+                <div class="card-body">
+                    <img class="img-fluid" src="../../../assets/pics/Custom_Clothing.png">
+                </div>
+
+
+            </div>
+        </div>
+        <!-- drittes Beispiel -->
+        <div class="col-md-3 mb-3">
+            <div class="card" tabindex="0" [popover]="scrollEffect" popoverTitle="Logo Animation" placement="right"
+                [outsideClick]="true">
+                <ng-template #scrollEffect>
+                    <div [innerHtml]="htmlThree"></div>
+                </ng-template>
+
+                <h5 class="card-header"><span @fadeIn *ngIf="changeLanguage">Scroll Effect</span>
+                    <span @fadeIn *ngIf="!changeLanguage">Scroll Effekt</span>
+                </h5>
+                <div class="card-body">
+                    <img class="img-fluid" src="../../../assets/pics/KeyMaking.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- drittes Beispiel -->
+        <div class="col-md-3 mb-3">
+            <div class="card" tabindex="0" [popover]="scrollEffect" popoverTitle="Logo Animation" placement="right"
+                [outsideClick]="true">
+                <ng-template #scrollEffect>
+                    <div [innerHtml]="htmlThree"></div>
+                </ng-template>
+
+                <h5 class="card-header"><span @fadeIn *ngIf="changeLanguage">Scroll Effect</span>
+                    <span @fadeIn *ngIf="!changeLanguage">Scroll Effekt</span>
+                </h5>
+                <div class="card-body">
+                    <img class="img-fluid" src="../../../assets/pics/DryCleaning.png">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

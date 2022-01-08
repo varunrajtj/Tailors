@@ -1,34 +1,65 @@
-.gallery-wrapper {
-    text-align: center;
-    margin-top: 50px;
-    .ngx-gallery {
-      display: inline-block;
-      margin-bottom: 20px;
-      width: 500px;
-       height: 400px;
-       border-color: #4a89ff;
-    }
+/* global */
+/* Medium devices (tablets, 768px and up) */
+/* Small devices (landscape phones, 576px and up) */
+.text-secondary {
+  color: #333 !important;
+}
+body {
+  font-size: 0.67vw;
+  background-color: #333;
+  color: rgb(250, 167, 73);
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 12vw;
+  font-weight: bold;
+}
+h2 {
+  font-size: 4.6vw;
+  font-weight: bold;
+  color: #676880;
+}
+h3 {
+  font-size: 1.75vw;
+  letter-spacing: 0.015vw;
+}
+h5 {
+  font-size: 1.08vw;
+}
+.bg-light {
+  background-color: #333 !important;
+}
+popover-container {
+  a {
+    color: white;
+    padding: 0 5px;
+    background-color: rgb(250, 167, 73);
+    text-decoration: none;
   }
-@import "./assets/font-awesome/scss/fontawesome.scss";
-@import "./assets/font-awesome/scss/solid.scss";
-@import "./assets/font-awesome/scss/brands.scss";
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-.user {
-  @extend %fa-icon;
-  @extend .fas;
-
-  &:before {
-    content: fa-content($fa-var-user);
+}
+@media (min-width: 768px) {
+  h1 {
+    line-height: 85%;
+  }
+  h2 {
+    margin-top: -1vh !important;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 7.4vw;
+  }
+  h3 {
+    font-size: 1.2rem;
   }
 }
 
-.twitter {
-  @extend %fa-icon;
-  @extend .fab;
-
-  &:before {
-    content: fa-content($fa-var-twitter);
-  }
+.required-asterisk {
+  color: red;
+  font-weight: bold;
+  margin-left: 3px;
+  font-size: 1.2em;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

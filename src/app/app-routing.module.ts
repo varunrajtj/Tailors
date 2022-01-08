@@ -1,28 +1,22 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { GalleryComponent } from './gallery/gallery.component';
+import { MyStartComponent } from './templates/my-start/my-start.component';
+import { MyContactComponent } from './templates/my-contact/my-contact.component';
+import { MyServiceComponent } from './templates/my-service/my-service.component';
+import { MyGalleryComponent } from './templates/my-gallery/my-gallery.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'gallery', component: GalleryComponent }
+    { path: '', redirectTo: '/start', pathMatch: 'full'} ,
+    { path: 'start', component: MyStartComponent}, 
+    { path: 'contact', component: MyContactComponent },
+    { path: 'service', component: MyServiceComponent },
+    { path: 'gallery', component: MyGalleryComponent }
 ];
-export const appRouting = RouterModule.forRoot(routes);
+
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
