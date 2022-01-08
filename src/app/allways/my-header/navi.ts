@@ -2,25 +2,25 @@ export const navigation=[
     {
         navi: "About Us",
         navi_french: "Qui nous sommes",
-        ziel: "start",
+        goal: "start",
         id: 1
       },
       {
         navi: "Contact",
         navi_french: "Contact",
-        ziel: "contact",
+        goal: "contact",
         id: 2
       },      
       {
         navi: "Service",
         navi_french: "Service",
-        ziel: "service",
+        goal: "service",
         id: 3
       },
       {
         navi: "Gallery",
         navi_french: "Galerie",
-        ziel: "gallery",
+        goal: "gallery",
         id: 4
       }
        
