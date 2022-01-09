@@ -33,78 +33,29 @@
     <ul class="list-group col-12 col-md-4 col-lg-3 list-unstyled">
       <li>
         <h5 class="list-group-item disabled pl-3 text-left">
-          <span *ngIf="changeLanguage" @fadeIn>Address</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Adresse</span>
+          <span *ngIf="changeLanguage" @fadeIn style="float: left;">Address</span>
+          <span *ngIf="!changeLanguage" @fadeIn style="float: left;">Adresse</span>
         </h5>
       </li>
       <li class="list-group-item text-left">
-        <address class="list-group-item disabled pl-3 text-left">
-          <a href="tel:+902443-5333">(902) 443-5333</a><br>
-          <a href="mailto:varunrajtj@gmail.com">varunrajtj@gmail.com</a><br>
-          Paula's Place Tailor Shop<br>
-          #30 Farnham Gate Rd<br>
-          Halifax, NS B3M 4R8<br>
-        </address>
-
-      </li>
-      <li class="list-group-item text-left">
-        <h6 class="list-group-item disabled pl-3 text-lg-right">
-          <span *ngIf="changeLanguage" @fadeIn style="float:left;">Business
-            hours:&nbsp;&nbsp;&nbsp;&nbsp;Mon&nbsp;&nbsp;-&nbsp;&nbsp;Fri&nbsp;&nbsp;&nbsp;&nbsp;8am&nbsp;&nbsp;-&nbsp;&nbsp;5pm</span>
+        <address style="word-wrap: break-word;white-space: pre-line;">
+          <span><a href="tel:+902443-5333">(902) 443-5333</a><br>
+            <a href="mailto:varunrajtj@gmail.com">varunrajtj@gmail.com</a><br>
+            Paula's Place Tailor Shop<br>
+            #30 Farnham Gate Rd<br>
+            Halifax, NS B3M 4R8<br></span>
+          <span *ngIf="changeLanguage" @fadeIn style="float:left;"><b>Business
+              hours:</b>&nbsp;&nbsp;Mon&nbsp;&nbsp;-&nbsp;&nbsp;Fri&nbsp;&nbsp;&nbsp;&nbsp;8am&nbsp;&nbsp;-&nbsp;&nbsp;5pm</span>
           <span *ngIf="!changeLanguage" @fadeIn style="float: left;">Heures
-            d'ouverture:&nbsp;&nbsp;&nbsp;&nbsp;Lun&nbsp;&nbsp;-&nbsp;&nbsp;Ven&nbsp;&nbsp;&nbsp;&nbsp;8am&nbsp;&nbsp;-&nbsp;&nbsp;5pm</span>
-        </h6>
+            d'ouverture:&nbsp;&nbsp;Lun&nbsp;&nbsp;-&nbsp;&nbsp;Ven&nbsp;&nbsp;&nbsp;&nbsp;8am&nbsp;&nbsp;-&nbsp;&nbsp;5pm</span>
+        </address>
       </li>
     </ul>
-    <!--ul class="list-group col-12 col-md-4 col-lg-3 list-unstyled">
-      <li>
-        <h6 class="list-group-item disabled pl-3">
-          <span *ngIf="changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-        </h6>
-      </li>
-      <li>
-        <h6 class="list-group-item disabled pl-3">
-          <span *ngIf="changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-        </h6>
-      </li>
-      <li>
-        <h6 class="list-group-item disabled pl-3">
-          <span *ngIf="changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-        </h6>
-      </li>
-      <li>
-        <h6 class="list-group-item disabled pl-3">
-          <span *ngIf="changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-        </h6>
-      </li>
-      <li>
-        <h6 class="list-group-item disabled pl-3">
-          <span *ngIf="changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-        </h6>
-      </li>
-      <li>
-        <h6 class="list-group-item disabled pl-3">
-          <span *ngIf="changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-        </h6>
-      </li>
-      <li>
-        <h6 class="list-group-item disabled pl-3">
-          <span *ngIf="changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Mon 09:00 - 18:00</span>
-        </h6>
-      </li>
-    </ul-->
     <ul class="list-group col-12 col-md-4 col-lg-3 list-unstyled">
       <li>
         <h5 class="list-group-item disabled pl-3 text-left">
-          <span *ngIf="changeLanguage" @fadeIn>Directions</span>
-          <span *ngIf="!changeLanguage" @fadeIn>Les Directions</span>
+          <span *ngIf="changeLanguage" @fadeIn style="float: left;">Directions</span>
+          <span *ngIf="!changeLanguage" @fadeIn style="float: left;">Les Directions</span>
         </h5>
       </li>
       <li>
@@ -118,6 +69,6 @@
   </div>
   <hr>
   <div class="container text-center">
-    <small>Copyright &copy; Paula's Place Tailor Shop</small>
+    <!--small>Copyright &copy; Paula's Place Tailor Shop</small-->
   </div>
 </footer>

@@ -41,35 +41,37 @@
                             <div class="col-md-6 form-group"><label>Name
                                     <span class="required-asterisk">*</span>
                                 </label>
-                                <input name="name" type="text" class="form-control" placeholder="Name" id="name"
-                                    required>
+                                <input name="name" type="text" class="form-control" placeholder="Sophie" id="name"
+                                    maxlength="30" required>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Email
                                     <span class="required-asterisk">*</span>
                                 </label>
-                                <input name="email" type="email" class="form-control" placeholder="Email" id="email"
-                                    required>
+                                <input name="email" type="email" class="form-control" placeholder="Sophie@example.com"
+                                    id="email" maxlength="30" required>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Phone
                                     <!--span class="required-asterisk">*</span-->
                                 </label>
-                                <input name="phone" type="text" class="form-control" placeholder="Phone" id="phone">
+                                <input name="phone" type="tel" class="form-control" placeholder="123-456-7890"
+                                    id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Subject
                                     <span class="required-asterisk">*</span>
                                 </label>
-                                <input name="subject" type="text" class="form-control" placeholder="Subject"
-                                    id="subject" required>
+                                <input name="subject" type="text" class="form-control" placeholder="Service Inquiry"
+                                    id="subject" maxlength="30" required>
                             </div>
                             <div class="col-12 form-group">
                                 <label>Message
                                     <span class="required-asterisk">*</span>
                                 </label>
-                                <textarea name="message" class="form-control" rows="3" placeholder="Message"
-                                    id="mailmessage" required></textarea>
+                                <textarea name="message" class="form-control" rows="3"
+                                    placeholder="I am writing to inquire about" id="mailmessage" maxlength="512"
+                                    required></textarea>
                             </div>
                             <div class="col-12">
                                 <input @fadeIn *ngIf="changeLanguage" name="submit" type="submit"
