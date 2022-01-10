@@ -22,7 +22,7 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
 import { MyHeaderComponent } from './allways/my-header/my-header.component';
 import { MyFooterComponent } from './allways/my-footer/my-footer.component';
 import { MarkAsteriskDirective } from './directives/directives/mark-asterisk.directive';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,6 +42,8 @@ import { MarkAsteriskDirective } from './directives/directives/mark-asterisk.dir
     BrowserModule,
     BrowserAnimationsModule,
     NgxGalleryModule,
+    FormsModule,
+    ReactiveFormsModule,
     ModalModule.forRoot(),
     PopoverModule.forRoot() 
   ],
