@@ -8,8 +8,6 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ServiceMailService } from './services/service-mail.service';
-
 import { MyStartComponent } from './templates/my-start/my-start.component';
 import { MyContactComponent } from './templates/my-contact/my-contact.component';
 import { MyServiceComponent } from './templates/my-service/my-service.component';
@@ -47,7 +45,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ModalModule.forRoot(),
     PopoverModule.forRoot() 
   ],
-  providers: [ServiceMailService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

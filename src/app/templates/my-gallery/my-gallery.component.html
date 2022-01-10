@@ -1,17 +1,28 @@
 <section style="margin-top: 1em; margin-bottom: 1em;">
+    <h1 class="mx-2">
+        <span @fadeIn *ngIf="changeLanguage">GALLERY.</span>
+        <span @fadeIn *ngIf="!changeLanguage">GALLERY.</span>
+    </h1>
     <div class="container">
-        <div class="d-flex flex-row">
-            <div class="d-flex flex-column">
-                <h1 class="mx-2">
-                    <span *ngIf="changeLanguage" @fadeIn>GALLERY.</span>
-                    <span *ngIf="!changeLanguage" @fadeIn>GALARIE.</span>
-                </h1>
-            </div>
-        </div>
-        <div class="d-flex flex-row">
-            <div class="d-flex flex-column">
-                <div class="gallery-wrapper">
-                    <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!--h5 class="card-header">
+                        <span @fadeIn *ngIf="changeLanguage">Get in Touch</span>
+                        <span @fadeIn *ngIf="!changeLanguage">Entrer en contact</span>
+                    </h5-->
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="gallery-wrapper">
+                                        <ngx-gallery [options]="galleryOptions" [images]="galleryImages"
+                                            class="ngx-gallery"></ngx-gallery>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

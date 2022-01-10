@@ -7,90 +7,102 @@
         <span @fadeIn *ngIf="changeLanguage">WELCOME</span>
         <span @fadeIn *ngIf="!changeLanguage">BIENVENUE</span>
     </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 px-2 px-lg-3 my-5">
+                <div class="card">
+                    <h5 class="card-header">
+                        <span @fadeIn *ngIf="changeLanguage">Get in Touch</span>
+                        <span @fadeIn *ngIf="!changeLanguage">Entrer en contact</span>
+                    </h5>
+                    <div class="card-body">
+                        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                            <!-- form message -->
+                            <div class="container">
+                                <div class="row">
+                                    <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
+                                        <span>{{responseMessage}}</span>
+                                    </div>
+                                    <div [ngClass]="submitted? 'hidden' : 'visible'" class="center-text">
+                                        <span>{{validationMessage}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end message -->
 
-    <div class="row">
-        <div class="col-md-6 px-2 px-lg-3 my-5">
-            <div class="card">
-                <h5 class="card-header">
-                    <span @fadeIn *ngIf="changeLanguage">Get in Touch</span>
-                    <span @fadeIn *ngIf="!changeLanguage">Entrer en contact</span>
-                </h5>
-                <div class="card-body">
-                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                        <!-- form message -->
-                        <div class="row">
-                            <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
-                                <span>{{responseMessage}}</span>
-                            </div>
-                            <div [ngClass]="submitted? 'hidden' : 'visible'" class="center-text">
-                                <span>{{validationMessage}}</span>
-                            </div>
-                        </div>
-                        <!-- end message -->
+                            <!-- form element -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label>Name<span class="required-asterisk">*</span></label>
+                                        <input type="text" class="form-control" formControlName="name"
+                                            placeholder="jane doe">
+                                        <div *ngIf="getControl.name.touched && getControl.name.invalid"
+                                            class="text-danger">
+                                            <div *ngIf="getControl.name.errors.required">Name is required.</div>
+                                            <div *ngIf="getControl.name.errors?.minlength">Minimum 3 character are
+                                                required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label>Email<span class="required-asterisk">*</span></label>
+                                        <input type="text" class="form-control" formControlName="email"
+                                            placeholder="email@example.com">
+                                        <div *ngIf="getControl.email.touched && getControl.email.invalid"
+                                            class="text-danger">
+                                            <div *ngIf="getControl.email.errors.required">Email is required.</div>
+                                            <div *ngIf="getControl.name.errors?.email">Email seems invalid.
+                                            </div>
+                                        </div>
+                                    </div>
 
-                        <!-- form element -->
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label>Name<span class="required-asterisk">*</span></label>
-                                <input type="text" class="form-control" formControlName="name" placeholder="jane doe">
-                                <div *ngIf="getControl.name.touched && getControl.name.invalid" class="text-danger">
-                                    <div *ngIf="getControl.name.errors.required">Name is required.</div>
-                                    <div *ngIf="getControl.name.errors?.minlength">Minimum 3 character are required.
+                                    <div class="col-md-6 form-group">
+                                        <label>Phone
+                                            <span class="required-asterisk"></span>
+                                        </label>
+                                        <input type="text" class="form-control" formControlName="phone"
+                                            placeholder="123-456-7890">
                                     </div>
+                                    <div class="col-md-6 form-group">
+                                        <label>Subject<span class="required-asterisk">*</span></label>
+                                        <input type="text" class="form-control" formControlName="subject"
+                                            placeholder="Service Inquiry">
+                                        <div *ngIf="getControl.subject.touched && getControl.subject.invalid"
+                                            class="text-danger" placeholder="Service Inquiry">
+                                            <div *ngIf="getControl.subject.errors.required">Subject is required.</div>
+                                            <div *ngIf="getControl.name.errors?.minlength">Minimum 3 character are
+                                                required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <label>Message<span class="required-asterisk">*</span></label>
+                                        <textarea type="text" class="form-control" formControlName="message" rows="3"
+                                            placeholder="I'm interested in..."></textarea>
+                                        <div *ngIf="getControl.message.touched && getControl.message.invalid"
+                                            class="text-danger" placeholder="Service Inquiry">
+                                            <div *ngIf="getControl.message.errors.required">Messsage is required.</div>
+                                            <div *ngIf="getControl.message.errors?.minlength">Minimum 3 character are
+                                                required.
+                                            </div>
+                                            <div *ngIf="getControl.message.errors?.maxlength">Maximum 512 character are
+                                                allowed.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <input [disabled]="isLoading" @fadeIn *ngIf="changeLanguage" name="submit"
+                                            type="submit" class="btn btn-success" value="Send Message">
+                                        <input [disabled]="isLoading" @fadeIn *ngIf="!changeLanguage" name="submit"
+                                            type="submit" class="btn btn-success" value="Envoyer le Message">
+                                    </div>
+                                    <input type="hidden" formControlName="honeypot" [value]="">
                                 </div>
+                                <!-- end form element -->
                             </div>
-                            <div class="col-md-6 form-group">
-                                <label>Email<span class="required-asterisk">*</span></label>
-                                <input type="text" class="form-control" formControlName="email"
-                                    placeholder="email@example.com">
-                                <div *ngIf="getControl.email.touched && getControl.email.invalid" class="text-danger">
-                                    <div *ngIf="getControl.email.errors.required">Email is required.</div>
-                                    <div *ngIf="getControl.name.errors?.email">Email seems invalid.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 form-group">
-                                <label>Phone
-                                    <span class="required-asterisk"></span>
-                                </label>
-                                <input type="text" class="form-control" formControlName="phone"
-                                    placeholder="123-456-7890">
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label>Subject<span class="required-asterisk">*</span></label>
-                                <input type="text" class="form-control" formControlName="subject"
-                                    placeholder="Service Inquiry">
-                                <div *ngIf="getControl.subject.touched && getControl.subject.invalid"
-                                    class="text-danger" placeholder="Service Inquiry">
-                                    <div *ngIf="getControl.subject.errors.required">Subject is required.</div>
-                                    <div *ngIf="getControl.name.errors?.minlength">Minimum 3 character are required.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 form-group">
-                                <label>Message<span class="required-asterisk">*</span></label>
-                                <textarea type="text" class="form-control" formControlName="message" rows="3"
-                                    placeholder="I'm interested in..."></textarea>
-                                <div *ngIf="getControl.message.touched && getControl.message.invalid"
-                                    class="text-danger" placeholder="Service Inquiry">
-                                    <div *ngIf="getControl.message.errors.required">Messsage is required.</div>
-                                    <div *ngIf="getControl.message.errors?.minlength">Minimum 3 character are required.
-                                    </div>
-                                    <div *ngIf="getControl.message.errors?.maxlength">Maximum 512 character are allowed.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <input [disabled]="isLoading" @fadeIn *ngIf="changeLanguage" name="submit" type="submit"
-                                    class="btn btn-success" value="Send Message">
-                                <input [disabled]="isLoading" @fadeIn *ngIf="!changeLanguage" name="submit"
-                                    type="submit" class="btn btn-success" value="Envoyer le Message">
-                            </div>
-                            <input type="hidden" formControlName="honeypot" [value]="">
-                        </div>
-                        <!-- end form element -->
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
