@@ -1,76 +1,86 @@
 <footer class="p-3 bg-dark text-white-50">
-  <div class="container">
-    <div class="row pb-0">
-      <ul class="list-group col-12 col-md-4 col-lg-3 list-unstyled">
-        <li>
-          <h5 class="list-group-item disabled pl-3">Sitemap</h5>
-        </li>
-        <li *ngFor="let count of navigation">
-          <a class="list-group-item list-group-item-action pl-3" routerLinkActive="active" routerLink="{{count.goal}}">
-            <span *ngIf="changeLanguage">{{count.navi}}</span>
-            <span *ngIf="!changeLanguage">{{count.navi_french}}</span>
-          </a>
-        </li>
-      </ul>
+  <div class="container-fluid">
+    <div class="row pb-0" style="display: flex;">
+      <div class="col-sm-auto" style="flex: 0 0 100px;">
+        <ul class="list-group col-12 col-md-4 col-sm-4 col-lg-3 list-unstyled">
+          <li>
+            <h5 class="list-group-item disabled pl-3">Sitemap</h5>
+          </li>
+          <li *ngFor="let count of navigation">
+            <a class="list-group-item list-group-item-action pl-3" routerLinkActive="active"
+              routerLink="{{count.goal}}">
+              <span *ngIf="changeLanguage">{{count.navi}}</span>
+              <span *ngIf="!changeLanguage">{{count.navi_french}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-      <ul class="list-group col-12 col-md-4 col-lg-3 list-unstyled">
-        <li>
-          <h5 class="list-group-item disabled pl-3 text-left">
-            <span *ngIf="changeLanguage" @fadeIn>Social</span>
-            <span *ngIf="!changeLanguage" @fadeIn>Sociale</span>
-          </h5>
-        </li>
-        <div class="col-md-auto">
-          <li class="list-group-item text-left">
+      <div class="col-sm-auto" style="flex: 0 0 100px;">
+        <ul class="list-group col-12 col-md-4 col-sm-4 col-lg-3 list-unstyled">
+          <li>
+            <h5 class="list-group-item disabled pl-3">
+              <span *ngIf="changeLanguage" @fadeIn>Social</span>
+              <span *ngIf="!changeLanguage" @fadeIn>Sociale</span>
+            </h5>
+          </li>
+          <li class="list-group-item text-center">
             <a href="https://www.facebook.com/PaulasPlaceTailorShop" class="list-group-item pl-0" target="social"><i
                 class="fab fa-facebook-square fa-3x" aria-hidden="true"></i><br>Facebook</a>
           </li>
-          <li class="list-group-item text-left">
+          <li class="list-group-item text-center">
             <a href="https://www.instagram.com/varun__29/" class="list-group-item pl-0" target="social"><i
                 class="fab fa-instagram fa-3x" aria-hidden="true"></i><br>Instagram</a>
           </li>
-        </div>
-      </ul>
-      <ul class="list-group col-12 col-md-4 col-lg-3 list-unstyled">
-        <li>
-          <h5 class="list-group-item disabled pl-3 text-left">
-            <span *ngIf="changeLanguage" @fadeIn style="float: left;">Address</span>
-            <span *ngIf="!changeLanguage" @fadeIn style="float: left;">Adresse</span>
-          </h5>
-        </li>
-        <li class="list-group-item text-left">
-          <address style="word-wrap: break-word;white-space: pre-line;">
-            <span><a href="tel:+902443-5333">(902) 443-5333</a><br>
-              <a href="mailto:varunrajtj@gmail.com">varunrajtj@gmail.com</a><br>
-              Paula's Place Tailor Shop<br>
-              #30 Farnham Gate Rd<br>
-              Halifax, NS B3M 4R8<br></span>
-            <span *ngIf="changeLanguage" @fadeIn style="float:left;"><b>Business
-                hours:</b>&nbsp;&nbsp;Mon&nbsp;&nbsp;-&nbsp;&nbsp;Fri&nbsp;&nbsp;&nbsp;&nbsp;8am&nbsp;&nbsp;-&nbsp;&nbsp;5pm</span>
-            <span *ngIf="!changeLanguage" @fadeIn style="float: left;">Heures
-              d'ouverture:&nbsp;&nbsp;Lun&nbsp;&nbsp;-&nbsp;&nbsp;Ven&nbsp;&nbsp;&nbsp;&nbsp;8am&nbsp;&nbsp;-&nbsp;&nbsp;5pm</span>
-          </address>
-        </li>
-      </ul>
-      <ul class="list-group col-12 col-md-4 col-lg-3 list-unstyled">
-        <li>
-          <h5 class="list-group-item disabled pl-3 text-left">
-            <span *ngIf="changeLanguage" @fadeIn style="float: left;">Directions</span>
-            <span *ngIf="!changeLanguage" @fadeIn style="float: left;">Les Directions</span>
-          </h5>
-        </li>
-        <li>
+        </ul>
+      </div>
+
+      <div class="col-sm-auto" style="flex: 0 0 100px;">
+        <ul class="list-group">
+          <li>
+            <h5 class="list-group-item disabled pl-3">
+              <span *ngIf="changeLanguage" @fadeIn>Address</span>
+              <span *ngIf="!changeLanguage" @fadeIn>Adresse</span>
+            </h5>
+          </li>
+          <li class="list-group-item ">
+            <address style="word-wrap: break-word;">
+              <span>
+                <a href="mailto:varunrajtj@gmail.com">varunrajtj@gmail.com</a><br>
+                <a href="tel:+902443-5333">902-443-5333</a><br>
+                <p translate="no" typeof="schema:PostalAddress">
+                  <span property="schema:name">Paula's Place Tailor Shop</span><br>
+                  <span property="schema:streetAddress">#30 Farnham Gate Rd</span><br>
+                  <span property="schema:addressLocality">Halifax</span>&nbsp;&nbsp;
+                  <!--, <abbr title="NS"
+                    property="schema:addressRegion">Nova Scotia</abbr>--> <span property="schema:postalCode">B3M
+                    4R8</span>&nbsp;&nbsp;<abbr property="schema:addressCountry">CA</abbr>
+                </p>
+              </span>
+              <span *ngIf="changeLanguage" @fadeIn>
+                Mon&nbsp;-&nbsp;Sat&nbsp;&nbsp;8am&nbsp;&nbsp;5pm
+              </span>
+              <span *ngIf="!changeLanguage" @fadeIn>
+                Lun&nbsp;-&nbsp;Sam&nbsp;&nbsp;8am&nbsp;&nbsp;5pm
+              </span>
+            </address>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-auto d-flex justify-content-center" style="flex-grow: .5;">
+        <div class="container-fluid">
           <div class="map-responsive">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2837.320404248672!2d-63.66696288446888!3d44.67223477909958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a208b473eb8b5%3A0x80247022e3570346!2s30%20Farnham%20Gate%20Rd%2C%20Halifax%2C%20NS%20B3M%204R8!5e0!3m2!1sen!2sca!4v1641653697595!5m2!1sen!2sca"
-              width="600" height="450" frameborder="0" style="border:0" allowfullscreen loading="lazy"></iframe>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2837.320404248672!2d-63.66696288446888!3d44.67223477909958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a208b473eb8b5%3A0x80247022e3570346!2s30%20Farnham%20Gate%20Rd%2C%20Halifax%2C%20NS%20B3M%204R8!5e0!3m2!1sen!2sca!4v1641653697595!5m2!1sen!2sca&z=19"
+              frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
     <hr>
-    <div class="container text-center">
-      <!--small>Copyright &copy; Paula's Place Tailor Shop</small-->
+    <div class="container-fluid text-center">
+      <small>Copyright &copy; Paula's Place Tailor Shop</small>
     </div>
   </div>
 </footer>

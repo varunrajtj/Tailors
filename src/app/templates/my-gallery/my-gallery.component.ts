@@ -37,8 +37,10 @@ export class MyGalleryComponent implements OnInit {
     })
     this.galleryOptions = [
       {
-        width: '1200px',
-        height: '800px',
+        width: (((window.screen.width)>=200) && ((window.screen.width)<320)) ? (window.screen.width*.8)+'px' : (((window.screen.width)>=320) && ((window.screen.width)<768)) ? (window.screen.width*.9)+'px': (((window.screen.width)>=768) && ((window.screen.width)<1200)) ? (window.screen.width*.9)+'px' : (((window.screen.width)>=1200) && ((window.screen.width)<1600)) ? (window.screen.width*.9)+'px' : (window.screen.width*.95)+'px',
+        height: (((window.screen.width)>=200) && ((window.screen.width)<320)) ? (window.screen.height*.8)+'px' : (((window.screen.width)>=320) && ((window.screen.width)<768)) ? (window.screen.height*.9)+'px': (((window.screen.width)>=768) && ((window.screen.width)<1200)) ? (window.screen.height*.9)+'px' : (((window.screen.width)>=1200) && ((window.screen.width)<1600)) ? (window.screen.height*.9)+'px' : (window.screen.height*.95)+'px',
+        //width: (window.screen.width*.9)+'px',
+        //height:(window.screen.height*.8)+'px',
         thumbnailsColumns: 4,
         arrowPrevIcon: 'fa fa-chevron-left',
         arrowNextIcon: 'fa fa-chevron-right',

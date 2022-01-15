@@ -1,41 +1,45 @@
-<div id="shadow3"></div>
-<div id="teaser" class="position-absolute">
-  <div id="teaser-word" class="text-white">&nbsp;&nbsp;<img class="middle" alt="Sewn with love"
-      src="../../../assets/pics/Sewing-Tools.png"></div>
-</div>
-
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <div id="shadow3"></div>
+    <div id="teaser" class="position-absolute">
+      <div id="teaser-word" class="text-white">&nbsp;&nbsp;<img class="middle" alt="Sewn with love"
+          src="../../../assets/pics/Sewing-Tools.png"></div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <!--a class="navbar-brand" href="#">Paula's Place Tailor Shop</a-->
+          <button class="navbar-toggler custom-toggler pl-0" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <button class="navbar-toggler custom-toggler pl-0" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li *ngFor="let count of navigation" class="nav-item">
-            <a class="nav-link pl-0 mr-3" routerLinkActive="active" routerLink="{{count.goal}}">
-              <span *ngIf="changeLanguage">{{count.navi}}</span>
-              <span *ngIf="!changeLanguage">{{count.navi_french}}</span>
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle pl-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe pl-0"></i>
-              <span *ngIf="changeLanguage">en</span>
-              <span *ngIf="!changeLanguage">fr</span>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" (click)="nextCount()">english</a>
-              <a class="dropdown-item" (click)="nextCount()">french</a>
-            </div>
-          </li>
-        </ul>
-
-      </div>
-    </nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li *ngFor="let count of navigation" class="nav-item">
+                <a class="nav-link pl-0 mr-sm-2" routerLinkActive="active" routerLink="{{count.goal}}">
+                  <span *ngIf="changeLanguage">{{count.navi}}</span>
+                  <span *ngIf="!changeLanguage">{{count.navi_french}}</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle pl-0" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe pl-0"></i>
+                  <span *ngIf="changeLanguage">en</span>
+                  <span *ngIf="!changeLanguage">fr</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" (click)="nextCount()">english</a>
+                  <a class="dropdown-item" (click)="nextCount()">french</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
   </div>
 </div>

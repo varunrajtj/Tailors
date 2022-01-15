@@ -7,7 +7,7 @@
         <span @fadeIn *ngIf="changeLanguage">WELCOME</span>
         <span @fadeIn *ngIf="!changeLanguage">BIENVENUE</span>
     </h1>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 px-2 px-lg-3 my-5">
                 <div class="card">
@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <form [formGroup]="form" (ngSubmit)="onSubmit()">
                             <!-- form message -->
-                            <div class="container">
+                            <div class="container-fluid">
                                 <div class="row">
                                     <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
                                         <span>{{responseMessage}}</span>
@@ -31,7 +31,7 @@
                             <!-- end message -->
 
                             <!-- form element -->
-                            <div class="container">
+                            <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-6 form-group">
                                         <label>Name<span class="required-asterisk">*</span></label>

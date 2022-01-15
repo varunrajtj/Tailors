@@ -3,26 +3,12 @@
         <span @fadeIn *ngIf="changeLanguage">GALLERY.</span>
         <span @fadeIn *ngIf="!changeLanguage">GALLERY.</span>
     </h1>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="card">
-                    <!--h5 class="card-header">
-                        <span @fadeIn *ngIf="changeLanguage">Get in Touch</span>
-                        <span @fadeIn *ngIf="!changeLanguage">Entrer en contact</span>
-                    </h5-->
-                    <div class="card-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="gallery-wrapper">
-                                        <ngx-gallery [options]="galleryOptions" [images]="galleryImages"
-                                            class="ngx-gallery"></ngx-gallery>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-wrapper">
+                    <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery">
+                    </ngx-gallery>
                 </div>
             </div>
         </div>
