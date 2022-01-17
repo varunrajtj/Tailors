@@ -20,8 +20,12 @@ export class MyHeaderComponent implements OnInit {
     })
   }
   
-  nextCount(){
-    this.servicelanguageservice.nextCount();
-  }
   
+  changeToEnglish(){
+    this.servicelanguageservice.changeToEnglish();
+  }
+
+  changeToFrench(){
+    this.servicelanguageservice.changeToFrench();
+  }
 }

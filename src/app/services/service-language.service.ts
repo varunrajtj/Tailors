@@ -13,11 +13,16 @@ export class ServiceLanguageService {
     this.changeLanguage= new BehaviorSubject(this.counter);
   }
 
-  nextCount(){
-    this.counter = !this.counter;
-    this.changeLanguage.next(this.counter);
-
-    var bb = this.changeLanguage;
-    console.log(bb);
+  changeToEnglish(){
+    if(!this.counter){
+      this.counter = !this.counter;
+      this.changeLanguage.next(this.counter);
+    }
+  }
+  changeToFrench(){
+    if(this.counter){
+      this.counter = !this.counter;
+      this.changeLanguage.next(this.counter);
+    }
   }
 }

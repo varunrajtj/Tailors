@@ -43,8 +43,12 @@ export class MyFooterComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
   }
   
-  nextCount(){
-    this.servicelanguageservice.nextCount();
+  changeToEnglish(){
+    this.servicelanguageservice.changeToEnglish ();
+  }
+
+  changeToFrench(){
+    this.servicelanguageservice.changeToFrench();
   }
 
   comment: string = "<p><em><strong>abc</strong></em></p>";
